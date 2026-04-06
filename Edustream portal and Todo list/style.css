@@ -1,0 +1,70 @@
+:root {
+    --primary: #4361ee;
+    --success: #2a9d8f;
+    --danger: #f72585;
+    --bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --text: #2b2d42;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0; padding: 20px;
+}
+
+.dashboard { max-width: 1100px; margin: 0 auto; }
+.main-header { text-align: center; margin-bottom: 30px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.card-header { background: var(--primary); color: white; padding: 15px; }
+.card-body { padding: 20px; }
+.wide-card { grid-column: 1 / -1; }
+
+.description { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+
+.input-group, .planner-controls { display: flex; gap: 8px; margin-bottom: 10px; }
+
+input {
+    flex: 1; padding: 10px;
+    border: 1px solid #ccc; border-radius: 6px;
+}
+
+button {
+    padding: 10px 15px; border: none; border-radius: 6px;
+    background: var(--primary); color: white;
+    cursor: pointer; font-weight: bold; transition: 0.2s;
+}
+
+button:hover { opacity: 0.8; }
+
+.button-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+
+.btn-danger { background: var(--danger); }
+
+.message-box, .status-indicator { margin-top: 15px; font-weight: bold; }
+
+.styled-list, .todo-grid { padding: 0; list-style: none; margin-top: 15px; }
+
+.styled-list li { border-bottom: 1px solid #eee; padding: 8px 0; }
+
+.todo-grid li {
+    background: #f8f9fa; padding: 12px; margin-bottom: 8px;
+    border-radius: 6px; display: flex; justify-content: space-between;
+    align-items: center; border-left: 4px solid var(--primary);
+}

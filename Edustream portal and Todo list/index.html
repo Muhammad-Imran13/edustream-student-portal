@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStream | Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header class="main-header">
+            <h1>EduStream Portal</h1>
+            <p>JavaScript Assignment Dashboard</p>
+        </header>
+
+        <div class="grid-container">
+            
+            <section class="card">
+                <div class="card-header"><h3>Student Authentication</h3></div>
+                <div class="card-body">
+                    <p class="description">Enter name to generate a greeting message.</p>
+                    <div class="input-group">
+                        <input type="text" id="studentInput" placeholder="Enter student name...">
+                        <button id="greetBtn">Generate Greet</button>
+                    </div>
+                    <div id="greetingDisplay" class="message-box"></div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header"><h3>Enrollment Lab</h3></div>
+                <div class="card-body">
+                    <p class="description">Manage students using Push, Pop, Shift, and Unshift.</p>
+                    <div class="input-group">
+                        <input type="text" id="arrayNameInput" placeholder="Name for array operation...">
+                    </div>
+                    <div class="button-grid">
+                        <button onclick="handlePush()">Push (End)</button>
+                        <button onclick="handleUnshift()">Unshift (Start)</button>
+                        <button onclick="handlePop()" class="btn-danger">Pop (Last)</button>
+                        <button onclick="handleShift()" class="btn-danger">Shift (First)</button>
+                    </div>
+                    <ul id="registryList" class="styled-list"></ul>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header"><h3>Course Catalog Search</h3></div>
+                <div class="card-body">
+                    <p class="description">Check if a subject is available in our list.</p>
+                    <div class="input-group">
+                        <input type="text" id="subjectInput" placeholder="Search (e.g. Math)">
+                        <button id="searchBtn">Check Status</button>
+                    </div>
+                    <div id="searchResult" class="status-indicator"></div>
+                </div>
+            </section>
+
+            <section class="card wide-card">
+                <div class="card-header"><h3>Academic Study Planner</h3></div>
+                <div class="card-body">
+                    <p class="description">Organize your study goals efficiently.</p>
+                    <div class="planner-controls">
+                        <input type="text" id="todoTask" placeholder="Add a new study topic...">
+                        <button id="addTodoBtn">Add Task</button>
+                        <button id="popTodoBtn" class="btn-danger">Clear Last</button>
+                    </div>
+                    <ul id="todoDisplay" class="todo-grid"></ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
